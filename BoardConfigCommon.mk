@@ -166,6 +166,9 @@ TARGET_LD_SHIM_LIBS := \
     /system/vendor/lib/libqomx_jpegenc.so|libboringssl-compat.so \
     /system/lib/libfacenet.so|libprotobuf-cpp-haxx.so
 
+# Peripheral manager
+TARGET_PER_MGR_ENABLED := true
+
 # Wifi
 BOARD_HAS_QCOM_WLAN := true
 BOARD_WLAN_DEVICE := qcwcn
