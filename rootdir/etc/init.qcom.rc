@@ -571,6 +571,7 @@ service rmt_storage /vendor/bin/rmt_storage
     class core
     user root
     group system wakelock
+    shutdown critical
     disabled
     writepid /dev/cpuset/system-background/tasks
 
