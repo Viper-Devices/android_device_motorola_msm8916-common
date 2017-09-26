@@ -167,6 +167,8 @@ TARGET_LD_SHIM_LIBS := \
     /system/vendor/lib/libqomx_jpegenc.so|libboringssl-compat.so \
     /system/lib/libfacenet.so|libprotobuf-cpp-haxx.so
 
+TARGET_LDPRELOAD := /system/lib/libboringssl-compat.so
+
 # Peripheral manager
 TARGET_PER_MGR_ENABLED := true
 
