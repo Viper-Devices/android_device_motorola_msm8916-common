@@ -449,7 +449,7 @@ static void camera_release(struct camera_device *device)
     wrapper_dev = (wrapper_camera_device_t*) device;
 
     ALOGV("%s->%08X->%08X", __FUNCTION__, (uintptr_t)device,
-            (uintptr_t)(((wrapper_camera_device_t*)device)->vendor));
+            (uintptr_t)(wrapper_dev->vendor));
 
     VENDOR_CALL(device, release);
 
