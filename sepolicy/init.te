@@ -3,6 +3,8 @@ allow init { domain -lmkd -crash_dump }:process noatsecure;
 
 allow init firmware_file:dir mounton;
 allow init fsg_file:dir mounton;
+allow init proc:file { open setattr write };
 allow init pstorefs:dir mounton;
-allow init system_file:file mounton;
+allow init sysfs:file setattr;
 allow init sysfs_graphics:file setattr;
+allow init system_file:file mounton;
