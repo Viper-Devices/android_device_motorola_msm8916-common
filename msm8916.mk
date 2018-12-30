@@ -216,6 +216,8 @@ PRODUCT_PACKAGES += \
     init.mmi.bt.sh \
     init.mmi.touch.sh \
     init.mmi.usb.rc \
+    init.qcom.mem.sh \
+    init.qcom.power_msm8916.rc \
     init.qcom.ril.sh \
     init.qcom.rc \
     stml0xx_wrapper.sh \
