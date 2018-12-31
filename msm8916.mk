@@ -197,6 +197,13 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_telephony.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video.xml
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    vidc.enc.narrow.searchrange=1 \
+    mm.enable.smoothstreaming=true \
+    mmp.enable.3g2=true \
+    media.aac_51_output_enabled=true \
+    audio.offload.video=true
+
 # OMX
 PRODUCT_PACKAGES += \
     libOmxAacEnc \
