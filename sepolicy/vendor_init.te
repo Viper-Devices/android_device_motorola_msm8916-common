@@ -1,8 +1,15 @@
+# vendor init
+allow vendor_init audio_data_file:dir { create setattr };
+allow vendor_init bluetooth_data_file:dir setattr;
 allow vendor_init bluetooth_data_file:file { setattr };
-allow vendor_init device:file create;
+allow vendor_init camera_data_file:dir { create setattr };
+allow vendor_init device:file { create write };
 allow vendor_init firmware_file:dir search;
 allow vendor_init firmware_file:file { getattr open read };
 allow vendor_init proc:file write;
 allow vendor_init proc_security:file write;
-allow vendor_init radio_data_file:file { open setattr write };
-allow vendor_init rootfs:dir create_dir_perms;
+allow vendor_init radio_data_file:dir { add_name search write };
+allow vendor_init radio_data_file:file { create open setattr write };
+allow vendor_init rootfs:dir { add_name create create_dir_perms setattr write };
+allow vendor_init system_data_file:dir { add_name setattr write };
+allow vendor_init tombstone_data_file:dir { add_name create search setattr write };

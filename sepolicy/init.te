@@ -1,10 +1,21 @@
 # required for LD_SHIM_LIBS
 allow init { domain -lmkd -crash_dump }:process noatsecure;
 
+allow init cameraserver:fd use;
 allow init firmware_file:dir mounton;
 allow init fsg_file:dir mounton;
-allow init proc:file { open setattr write };
+allow init gpu_device:chr_file write;
+allow init hal_power_hwservice:hwservice_manager add;
+allow init hidl_base_hwservice:hwservice_manager add;
+allow init hwservicemanager:binder { call transfer };
+allow init ion_device:chr_file write;
+allow init proc:file { getattr open read setattr write };
 allow init pstorefs:dir mounton;
-allow init sysfs:file setattr;
+allow init self:socket { read write };
+allow init self:udp_socket ioctl;
+allow init sysfs:file { open setattr write };
 allow init sysfs_graphics:file setattr;
-allow init system_file:file mounton;
+allow init sysfs_leds:lnk_file read;
+allow init system_file:file { execute_no_trans mounton };
+allow init vendor_file:file execute_no_trans;
+allow init video_device:chr_file { ioctl write };

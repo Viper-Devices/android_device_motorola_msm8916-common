@@ -1,1 +1,2 @@
 allow netmgrd sysfs:file getattr;
+allow netmgrd sysfs_net:dir search;
